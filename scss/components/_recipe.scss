@@ -1,0 +1,121 @@
+.recipe {
+    width: 100%;
+    background-color: #ebebeb;
+    padding: 20px;
+    padding-right: 0;
+    margin-bottom: 30px;
+    @include mq($min-width:768px) {
+        width: 40%;
+        position: -webkit-sticky;
+        position: sticky;
+        background-color: #fff;
+        top: 80px;
+    }
+    &__wrapper {
+        &__list {
+            ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                li {
+                    font-family: $serif;
+                    padding: 10px 0;
+                    font-size: 15px;
+                    width: 100%;
+                    border-bottom: 1px solid $lines_gray;
+                    display: table;
+                    &:first-child {
+                        border-top: 1px solid $lines_gray;
+
+                    }
+                    span {
+                        display: table-cell;
+                        &:first-child {
+                            width: 70px;
+                        }
+                    }
+                }
+            }
+        }
+        &__header {
+            &__above {
+                display: -webkit-flex;
+                display: -ms-flex;
+                display: flex;
+                align-items: center;
+                border-bottom: 1px solid $lines_gray;
+                padding-bottom: 15px;
+                &__time {
+                    display: -webkit-flex;
+                    display: -ms-flex;
+                    display: flex;
+                    align-items: center;
+                    margin-right: 28px;
+                    &__icon {
+                        width: 32px;
+                        height: 32px;
+                        background-image: url(../images/icons.png);
+                        background-size: 160px 32px;
+
+                    }
+                    p {
+                        color: $color_primary;
+                        font-weight: 400;
+                        font-size: 12px;
+                        margin-left: 5px;
+                    }
+                }
+                &__kcal {
+                    margin-right: 28px;
+                    p {
+                        span {
+                            color: $color_primary;
+                            font-weight: 400;
+                            font-size: 12px;
+                            margin-left: 3px;
+                        }
+                    }
+                }
+                &__cat {
+                    display: none;blog bup
+                    p {
+                        text-transform: uppercase;
+                        color: #fff;
+                        background-color: $color_black;
+                        padding: 1px 3px;
+                    }
+                }
+            }
+            &__below {
+                padding: 10px 0;
+                h3 {
+                    margin: 0;
+                    font-size: 36px;
+                }
+                p {
+                    color: $color_primary;
+                    font-weight: 400;
+                    font-size: 12px;
+                    margin: 0;
+                    margin-top: -5px;
+                }
+            }
+        }
+    }
+}
+.text-content-recipe-wrapper {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    @include mq($min-width:768px) {
+        flex-direction: row;
+    }
+}
+.listonic-button {
+    box-shadow: none !important;
+}
+iframe.listonic_ifrm_used {
+    margin-top: 20px;
+}

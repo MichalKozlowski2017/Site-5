@@ -1,0 +1,24 @@
+.share {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    font-size: 11px;
+    text-transform: uppercase;
+    p {
+        margin-right: 10px;
+        font-weight: Heavy;
+    }
+    a {
+        margin-right: 13px;
+        font-weight: 400;
+        color: $color_primary;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+            transition: .5s !important;
+        }
+        span {
+            color: $color_black;
+        }
+    }
+}

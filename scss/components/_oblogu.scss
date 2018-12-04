@@ -1,0 +1,175 @@
+.oblogu {
+    &__wrapper {
+        &__title {
+            h2 {
+                text-transform: uppercase;
+                font-size: 48px;
+            }
+        }
+        &__lead {
+            h4 {
+                font-family: $serif;
+                font-size: 32px;
+                line-height: 36px;
+                font-weight: 300;
+            }
+
+        }
+        &__text {
+            h3 {
+                font-size: 24px;
+                font-weight: bold;
+            }
+            p {
+                font-family: $serif;
+                font-size: 18px;
+                font-weight: 300;
+                margin-bottom: 20px;
+            }
+        }
+        &__eksperci {
+            h3 {
+                font-size: 24px;
+                font-weight: bold;
+            }
+            &__wrapper {
+                display: -webkit-flex;
+                display: -ms-flex;
+                display: flex;
+                flex-wrap: wrap;
+                position: relative;
+                @include mq($min-width:575px) {
+                    &:after {
+                        content: '';
+                        width: 1px;
+                        height: 100%;
+                        background-color: #e1e1e1;
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+                &__ekspert {
+                    width: 100%;
+                    position: relative;
+                    @include mq($min-width:575px) {
+                        width: 50%;
+                        &:nth-child(even) {
+                            padding-left: 20px;
+                        }
+                        &:nth-child(odd) {
+                            padding-right: 20px;
+                        }
+                        &:nth-child(n+3)  {
+                            &:nth-child(odd) {
+                                h4 {
+                                    &:before {
+                                        content: '';
+                                        width: 93%;
+                                        height: 1px;
+                                        background-color: #e1e1e1;
+                                        position: absolute;
+                                        top: -20px;
+                                        left: 0;
+                                    }
+                                }
+                            }
+                            &:nth-child(even) {
+                                h4 {
+                                    &:before {
+                                        content: '';
+                                        width: 93%;
+                                        height: 1px;
+                                        background-color: #e1e1e1;
+                                        position: absolute;
+                                        top: -20px;
+                                        right: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    img {
+                        width: 100%;
+                        height: auto;
+                        position: relative;
+                    }
+                    h4 {
+                        font-size: 16px;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        line-height: 1;
+                    }
+                    &__socials {
+                        ul {
+                            list-style: none;
+                            margin: 0;
+                            padding: 0;
+
+                            li {
+                                display: inline-block;
+                                span {
+                                    color: $color_black;
+                                    font-size: 11px;
+                                }
+                                &:first-child {
+                                    span {
+                                        display: none;
+                                    }
+                                }
+
+                                a {
+                                    color: $color_primary;
+                                    font-weight: 300;
+                                    text-decoration: none;
+                                    font-size: 11px;
+                                }
+                            }
+                        }
+                    }
+                    p {
+                        font-family: $serif;
+                        font-weight: 300;
+                        margin-top: 20px;
+                        position: relative;
+                        margin-bottom: 38px;
+                        &:after {
+                            content: '';
+                            width: 100%;
+                            height: 1px;
+                            background-color: #e1e1e1;
+                            position: absolute;
+                            bottom: -15px;
+                            left: 0;
+                        }
+                        @include mq($min-width:575px) {
+                            &:after {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.oblogu__wrapper__image {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    img {
+        width: 100%;
+        height: auto;
+    }
+    p {
+        font-size: 12px;
+        color: $color_primary;
+        font-weight: 300;
+        margin-top: 10px;
+        padding: 0 20px;
+        @include mq($min-width: 1000px) {
+            padding: 0;
+        }
+    }
+}

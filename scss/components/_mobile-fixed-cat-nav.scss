@@ -1,0 +1,42 @@
+.mobile-fixed-cat-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  display: block;
+  border-top: 1px solid $lines_gray;
+  @include mq($min-width:575px) {
+    display: none;
+  }
+
+  nav {
+    ul {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      align-items: center;
+      padding: 25px 0;
+      justify-content: space-around;
+
+      li {
+        a {
+          font-size: 10px;
+          text-decoration: none;
+          color: $color_primary;
+          transition: 0.3s;
+
+          &:hover {
+            color: $color_black;
+          }
+        }
+      }
+
+      li.active {
+        a {
+          color: $color_black;
+        }
+      }
+    }
+  }
+}

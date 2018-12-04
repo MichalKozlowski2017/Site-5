@@ -1,0 +1,72 @@
+.text-content {
+    p.p1, p.p3, p, ol, li {
+        font-family: $serif;
+        font-size: 21px;
+        line-height: 30px;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+    ol {
+        margin: 0;
+        li {
+            margin-bottom: 0;
+        }
+    }
+
+    ol {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    ol {
+        li {
+            counter-increment: step-counter;
+            margin-bottom: 10px;
+            margin-left: 18px;
+            position: relative;
+            padding-left: 10px;
+        }
+    }
+
+    ol {
+        li {
+            &:before {
+                content: counter(step-counter);
+                font-size: 100%;
+                color: $color_black;
+                font-weight: bold;
+                left: -15px;
+                top: -1px;
+                position: absolute;
+                font-family: $sans !important;
+            }
+        }
+    }
+
+    h2 {
+        font-size: 36px;
+        line-height: 36px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    img > p {
+        margin-bottom: 10px;
+    }
+    em {
+        color: $color_primary;
+        text-transform: uppercase;
+        font-family: $sans;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 13px;
+        margin-top: 5px;
+        font-style: normal !important;
+    }
+}

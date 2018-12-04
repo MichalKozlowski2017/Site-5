@@ -1,0 +1,23 @@
+.tagcloud {
+    // margin-left: -5px;
+    &__wrapper {
+        padding-top: 5px;
+        padding-bottom: 10px;
+        overflow: hidden;
+        height: 38px;
+        a {
+            background-color: $color_secondary;
+            color: $color_black;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 2px 8px;
+            margin: 5px 5px;
+            transition: .3s;
+            display: inline-block;
+            font-size: 11px;
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}

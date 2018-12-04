@@ -1,0 +1,299 @@
+.comments {
+  &__title {
+    h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+    }
+  }
+
+  .comment {
+    margin-bottom: 20px !important;
+  }
+
+  &__comment-list {
+    display: inline-block;
+
+    &__comment-meta {
+      display: inline-block;
+      margin-bottom: 5px;
+
+      p {
+        display: inline-block;
+        font-weight: normal;
+        font-size: 12px;
+        font-weight: bold;
+      }
+
+      &__comment-date {
+        display: inline-block;
+        font-weight: normal;
+        font-size: 12px;
+      }
+    }
+
+    &__comment-text {
+      font-size: 14px;
+      font-family: $serif;
+      font-weight: 300;
+      padding-bottom: 10px;
+      margin-bottom: 5px;
+      border-bottom: 1px solid #d2d2d2;
+    }
+  }
+
+  &__comment-form-container {
+    &__comment-form-title {
+      font-size: 24px;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+    }
+
+    &__comment-form-note {
+      margin-bottom: 20px;
+
+      p {
+        font-size: 14px;
+        font-family: $serif;
+        font-weight: 300;
+        color: #767676;
+      }
+    }
+
+    form {
+      .input-wrap.checkbox {
+        label {
+          display: inline-block;
+        }
+
+        input {
+          display: inline-block;
+        }
+      }
+
+      .input-wrap {
+        label {
+          font-size: 11px;
+          font-weight: bold;
+          display: block;
+          margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="button"],
+        input[type="submit"],
+        input,
+        textarea {
+          -webkit-appearance: none;
+          border-radius: 0;
+        }
+
+        input,
+        textarea {
+          &:focus {
+            box-shadow: none;
+            outline: none;
+          }
+          font-size: 15px;
+          margin-bottom: 5px;
+          border: 1px solid $color_black;
+          width: 100%;
+          padding: 15px 10px;
+          @include mq($min-width: 575px) {
+            padding: 10px;
+            font-size: 11px;
+          }
+        }
+
+        input {
+          padding: 5px 10px;
+          font-weight: bold;
+          margin-bottom: 10px;
+          @include mq($min-width: 575px) {
+            padding: 5px 10px;
+            font-size: 11px;
+            width: 155px;
+          }
+        }
+
+        .checkbox-container {
+          display: block;
+          position: relative;
+          padding-left: 35px;
+          margin-bottom: 12px;
+          padding-top: 5px;
+          color: $active_gray;
+          cursor: pointer;
+          font-size: 14px;
+          font-weight: 300;
+          font-family: $serif;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          @include mq($min-width: 575px) {
+            margin-top: 20px;
+            margin-bottom: 30px;
+          }
+
+          input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+
+            &:checked {
+              + span.checkmark {
+                &:after,
+                &:before {
+                  display: block;
+                }
+              }
+            }
+          }
+
+          .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #fff;
+            border: 1px solid $color_black;
+
+            &:after,
+            &:before {
+              left: 11px;
+              top: 5px;
+              width: 1px;
+              height: 13px;
+            }
+
+            &:after {
+              content: '';
+              position: absolute;
+              display: none;
+              background-color: $color_black;
+              -webkit-transform: rotate(45deg);
+              -ms-transform: rotate(45deg);
+              transform: rotate(45deg);
+            }
+
+            &:before {
+              content: '';
+              position: absolute;
+              display: none;
+              background-color: $color_black;
+              -webkit-transform: rotate(-45deg);
+              -ms-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+            }
+          }
+        }
+
+        input[type="submit"] {
+          background-color: $color_primary;
+          color: #fff;
+          min-width: 180px;
+          padding: 10px;
+          text-transform: uppercase;
+          box-shadow: none !important;
+          cursor: pointer;
+          border: none;
+          margin-top: 30px;
+          border-radius: 0 !important;
+          -webkit-border-radius: 0 !important;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          &:disabled {
+            display: none;
+          }
+        }
+
+        textarea {
+          width: 100%;
+          overflow: hidden;
+          min-height: 100px !important;
+          resize: none;
+        }
+
+        .comment-error {
+          border: 1px solid #cc0824 !important;
+        }
+
+        div.error {
+          margin-bottom: 20px;
+          color: #cc0824;
+          font-family: $serif;
+          font-weight: 300;
+          @include mq($min-width: 575px) {
+            &:nth-child(2) {
+              margin-left: 0;
+              text-align: right;
+              width: 100%;
+            }
+            display: inline-block;
+            margin-left: 20px;
+          }
+        }
+
+        .valid {
+          border: 1px solid $color_primary !important;
+        }
+      }
+    }
+  }
+}
+
+#comment-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin-bottom: 30px;
+  }
+}
+
+.logged-in-as {
+  font-size: 12px;
+  margin-bottom: 10px;
+
+  a {
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    color: $color_black;
+
+    &:first-child {}
+
+    &:last-child {
+      margin-left: 10px;
+      font-weight: 300;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.form-submit {
+  input[type="submit"] {
+    background-color: $color_primary;
+    color: #fff;
+    min-width: 180px;
+    padding: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    margin-top: 25px;
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    &:disabled {
+      background-color: $lines_gray;
+    }
+  }
+}

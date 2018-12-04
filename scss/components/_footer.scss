@@ -1,0 +1,169 @@
+.page-footer {
+    background-color: $color_black;
+    background-image: url('/blog/wp-content/themes/--usuniete--blog/images/paper_pattern.jpg');
+    padding: 50px 30px 70px 30px;
+    &--extra-padding {
+        padding-bottom: 130px;
+        @include mq($min-width:575px) {
+            padding-bottom: 70px;
+        }
+
+    }
+    margin-top: 100px;
+    position: relative;
+    @include mq($min-width:1200px) {
+        margin-top: 50px;
+    }
+    nav {
+        ul {
+            li {
+                margin-bottom: 15px;
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                    font-size: 13px;
+                }
+            }
+        }
+        @include mq($min-width: 992px) {
+            ul {
+                li {
+                    display: inline-block;
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+    &__text {
+        color: #fff;
+        font-family: $serif;
+        line-height: 1.8;
+        font-weight: 400;
+        margin-top: 30px;
+
+        @include mq($min-width: 992px) {
+            max-width: 50%;
+        }
+        p {
+            &:last-child {
+                font-family: "futura-pt",sans-serif;
+                margin-top: 10px;
+            }
+        }
+    }
+    .socials {
+        margin-top: 25px;
+        position: relative;
+        top: auto;
+        right: auto;
+        @include mq($min-width:575px) {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            li {
+                display: inline-block;
+                margin-right: 22px;
+                position: relative;
+                a {
+                    img {
+                        height: 25px;
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+.dark-overlay {
+    @include mq($min-width:1150px) {
+        display: none !important;
+    }
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: $color_black;
+    opacity: .7;
+    &--search {
+        display: block !important;
+    }
+}
+
+.back-to-top {
+	font-size: 12px;
+	text-transform: uppercase;
+	line-height: 1.1;
+	position: absolute;
+	top: -50px;
+	left: 50%;
+    transform: translateX(-50%);
+    color: $color_black;
+    transition: .5s;
+    cursor: pointer;
+    text-align: center;
+    @include mq($min-width:1200px) {
+        display: block;
+        top: -80px;
+    	left: 50px;
+        text-align: left;
+    }
+    &:hover {
+        color: $color_primary;
+    }
+    &:before {
+        content: '';
+        width: 16px;
+        height: 24px;
+        background-image: url('/blog/wp-content/themes/--usuniete--blog/images/totop.png');
+        background-size: 16px 24px;
+        transform: scale(.8);
+        position: absolute;
+        top: -30px;
+        left: 19px;
+        @include mq($min-width:1200px) {
+            top: -30px;
+            left: 0;
+        }
+    }
+}
+.prev-page-btn {
+    position: fixed;
+    top: 120px;
+    left: 50px;
+    line-height: 0.8;
+    max-width: 100px;
+    display: none;
+    @include mq($min-width:1300px) {
+        display: block;
+    }
+    a {
+        font-size: 12px;
+    	text-transform: uppercase;
+        color: $color_black;
+        transition: .5s;
+        line-height: 1;
+        cursor: pointer;
+        text-decoration: none;
+        &:hover {
+            color: $color_primary;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 32px;
+            background-size: 20px 32px;
+            background-image: url('/blog/wp-content/themes/--usuniete--blog/images/prev-post.png');
+            left: -5px;
+            top: -30px;
+            transform: scale(0.5);
+        }
+    }
+
+}
